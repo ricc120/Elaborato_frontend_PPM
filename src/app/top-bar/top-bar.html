@@ -1,0 +1,50 @@
+
+<!-- Main Header -->
+<div class="main-header border-bottom">
+    <div class="row py-3">
+      
+      <!-- Date and Weather Bar -->
+      <div class="col-3 d-flex align-self-end ">
+          <div class="text-muted small px-2">
+          <time>{{ currentDate | date:'EEEE, MMMM d, yyyy' }} {{ currentTime }} |</time>
+          <a href="#" class="text-decoration-none text-dark small" aria-label="Weather">
+          <i class="bi bi-thermometer-sun me-1"></i>
+        </a>
+      </div>
+      </div>
+
+      <!-- Logo -->
+      <div class="col-6 d-flex align-self-center justify-content-center">
+        <a href="/" class="text-decoration-none d-flex" aria-label="Home">
+          <h1 class="display-6 fw-bold text-dark m-0 d-flex" style="font-size: 1.8rem; letter-spacing: -1px;">
+            POST GAZETTE
+          </h1>
+        </a>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="col-3 d-flex align-self-end px-2">
+          <ul class="header-actions text-muted small">
+            <a href="https://obituaries.post-gazette.com" class="text-decoration-none text-dark">Obituaries </a> |
+            <a href="https://pge.post-gazette.com/pf3" class="text-decoration-none text-dark">PGe </a> |
+            <a href="http://store.post-gazette.com/" class="text-decoration-none text-dark">PG Store </a> |
+            <a href="https://archives.post-gazette.com/" class="text-decoration-none text-dark">Archives </a>|
+            <div class="dropdown custom-hover-dropdown d-inline-block">
+              
+              <a href="#" class="text-decoration-none text-dark">
+                Classifieds
+                <i class="bi bi-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+              </a>
+
+              <ul class="dropdown-menu shadow-sm rounded-0 border-dark mt-0">
+                <li><a class="dropdown-item small" href="#">Classified</a></li>
+                <li><a class="dropdown-item small" href="#">Event</a></li>
+                <li><a class="dropdown-item small" href="#">Jobs</a></li>
+                <li><a class="dropdown-item small" href="#">Public Notices</a></li>
+                <li><a class="dropdown-item small" href="#">Pets</a></li>
+              </ul>
+            </div>          
+          </ul>
+      </div>
+    </div>
+</div>

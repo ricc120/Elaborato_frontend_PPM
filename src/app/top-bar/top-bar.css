@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+  .main-header h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .form-control {
+    font-size: 0.85rem;
+  }
+}
+
+/* Quando il mouse passa sul contenitore principale, mostra il sottomenu */
+.custom-hover-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Opzionale: Assicura che la freccia dia un feedback visivo */
+.custom-hover-dropdown:hover i {
+  color: #1fb25a; /* Cambia colore all'hover (es. il verde del sito) */
+}
+
+/* Evita che il menu scompaia se c'è un piccolo spazio tra il testo e la tendina */
+.custom-hover-dropdown .dropdown-menu {
+  margin-top: 0; 
+}
+
+.header-actions {
+  margin-bottom: 0%;
+}

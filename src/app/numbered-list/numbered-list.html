@@ -1,0 +1,27 @@
+<section class="numbered-section row mb-5 mt-4">
+  <div class="col-lg-8 col-12">
+
+    <div class="header__bar mb-3">
+      <i class="bi" [ngClass]="iconClass" [style.color]="iconColor"></i>
+      <h2 class="text-uppercase fw-bold fs-6 d-inline-block ms-2 m-0">{{ title }}</h2>
+    </div>
+
+    <div class="row object-fit-cover mb-3">
+      <div class="col-4 col-md-3"> 
+        <div class="position-relative">
+          <img src="https://placehold.co/263x118" alt="News Image" class="img-fluid w-100">
+          <div class="position-absolute top-0 start-0 bg-dark text-white px-2 fw-bold">1</div>
+          <div class="position-absolute bottom-0 start-0 bg-primary text-white px-1" style="font-size: 10px;">LABEL</div>
+        </div>
+      </div>
+      
+      <div class="col-8 col-md-9 d-flex flex-column justify-content-center">
+        <p class="text small fw-bold mb-1">Fetterman asks federal government for increased security...</p>
+        <div class="small text-muted" style="font-size: 0.75rem;">
+          <i class="bi bi-clock"></i> {{ currentDate | date:'h:mm a, MMM d' }} 
+          <i class="bi bi-person-fill ms-2"></i> John Doe
+        </div>
+      </div>
+    </div>
+    </div>
+</section>

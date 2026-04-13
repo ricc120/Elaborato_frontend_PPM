@@ -1,0 +1,90 @@
+ 
+@media (max-width: 767px) {
+  .news-hero-item img,
+  .list-thumbnail img {
+    aspect-ratio: 4 / 3; /* Mantiene un rapporto di 1:1 per le immagini */
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  .story-row {
+    margin-bottom: 0%;
+  }
+
+  .story-row a {
+    font-size: medium;
+  }
+
+  .img-stack a {
+    font-size: medium;
+  }
+
+  hr {
+    width: 100%;
+    border-top: 5px solid #ccc;
+    opacity: 0.5;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+}
+
+/* 💻 TABLET E DESKTOP (Dai 768px in su) */
+@media (min-width: 768px) {
+  
+  /* Quando l'immagine torna grande (col-md-12) */
+  .news-hero-item img {
+    /* Cambia la forma in un rettangolo panoramico (es. 16:9 o 4:3) */
+    aspect-ratio: 4 / 3; 
+    width: 100%;
+  }
+
+  .news-hero-item img:hover{
+    filter: brightness(70%);
+  }
+
+  .news-hero-item {
+    margin-bottom: 3;
+  }
+
+  .news-hero-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    /* Rimuovi height: 50% se l'avevi messo prima, l'aspect-ratio gestisce già lo spazio */
+  }
+
+  .news-hero-caption a {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+  }
+
+  .story-row {
+    margin-bottom: 3;
+  }
+
+  .story-row a {
+    font-size: large;
+  }
+
+  hr {
+    margin-top: 2;
+    margin-bottom: 2;
+  }  
+}
+
+.btn-custom-category:hover {
+  background-color: var(--section-color);
+  border-color: var(--section-color);
+  color: #ffffff;
+}
+
+.header__bar {
+  border-top: 4px solid var(--section-color);
+}
+

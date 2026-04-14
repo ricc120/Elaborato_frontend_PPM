@@ -1,0 +1,49 @@
+@media (min-width: 768px) {
+    /* Quando l'immagine torna grande (col-md-12) */
+  .ap-hero-item img {
+    /* Cambia la forma in un rettangolo panoramico (es. 16:9 o 4:3) */
+    aspect-ratio: 4 / 3; 
+    width: 100%;
+
+  }
+
+  .ap-hero-item img:hover{
+    filter: brightness(70%);
+  }
+
+  .ap-hero-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    /* Rimuovi height: 50% se l'avevi messo prima, l'aspect-ratio gestisce già lo spazio */
+  }
+
+  .ap-hero-caption a {
+    color: #ffffff !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+  }
+
+  .story-row a {
+    font-size: large;
+  }
+  
+}
+
+@media (min-width: 992px) {
+   .list-thumbnail {
+    width: 65px; /* o la tua misura desktop */
+  }
+
+  .story-row a,
+  .ap-hero-caption a {
+    font-size: 0.9rem;
+  }
+
+  .ap-hero-item img {
+    aspect-ratio: 4 / 3;
+  }
+}
+

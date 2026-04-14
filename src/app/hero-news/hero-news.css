@@ -68,4 +68,10 @@
         padding-right: 0;
     }
 }
+
+@media (max-width: 767px) {
+    .ap-columns {
+        display: none;
+    }
+}
   

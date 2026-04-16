@@ -1,0 +1,22 @@
+@media (min-width: 992px) {
+   .list-thumbnail {
+    width: 65px;
+  }
+
+  .opinion-row a {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+    .story-row a {
+    font-size: large;
+  }
+}
+
+.btn-custom-category:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #ffffff;
+}

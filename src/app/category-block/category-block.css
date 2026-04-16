@@ -1,8 +1,7 @@
-
 @media (max-width: 767px) {
   .news-hero-item img,
   .list-thumbnail img {
-    aspect-ratio: 4 / 3; /* Mantiene un rapporto di 1:1 per le immagini */
+    aspect-ratio: 4 / 3; 
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -31,12 +30,9 @@
   
 }
 
-/* 💻 TABLET E DESKTOP (Dai 768px in su) */
 @media (min-width: 768px) {
   
-  /* Quando l'immagine torna grande (col-md-12) */
   .news-hero-item img {
-    /* Cambia la forma in un rettangolo panoramico (es. 16:9 o 4:3) */
     aspect-ratio: 4 / 3; 
     width: 100%;
   }
@@ -55,7 +51,6 @@
     left: 0;
     width: 100%;
     background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
-    /* Rimuovi height: 50% se l'avevi messo prima, l'aspect-ratio gestisce già lo spazio */
   }
 
   .news-hero-caption a {

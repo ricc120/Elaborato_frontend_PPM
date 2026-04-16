@@ -1,79 +1,6 @@
-.text-pack-item {
-    font-family: proxima-nova, Roboto, Arial, san-serif;
-    margin-bottom: 2.1rem;
-    line-height: 1.7rem;
-}
-
-.adv-panel {
-    margin-top: 10px;
-}
-
-.hero-news {
-    margin: 0%;
-}
-
-.main-container {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-
-.number-corner__box {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 60px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 8px;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-family: proxima-nova, Roboto, Arial, san-serif;
-    font-weight: 500;
-    font-size: 0.9rem;
-    background-color: brightness(70%);
-    text-align: center;
-    color: white;
-}
-
-.label-corner__box {
-
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    font-family: proxima-nova, Roboto, Arial, san-serif;
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    background-color: #00ff6e;
-    z-index: 9;
-}
-
-@media (max-width: 1200px) {
-    .main-container {
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-}
-
-@media (max-width: 576px) {
-    article { 
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
 
 @media (max-width: 767px) {
-    .ap-columns {
-        display: none;
-    }
-
-    app-essential-opinions {
-        display: none;
-    }
-
-  .trend-news .list-thumbnail {
+.trend-news .list-thumbnail {
     width: 135px;
   }
   
@@ -145,4 +72,36 @@
     .trend-news .list-thumbnail img {
         aspect-ratio: 140 / 90;
     }
+}
+
+.number-corner__box {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: proxima-nova, Roboto, Arial, san-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: brightness(70%);
+    text-align: center;
+    color: white;
+}
+
+.label-corner__box {
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-family: proxima-nova, Roboto, Arial, san-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background-color: #00ff6e;
+    z-index: 9;
 }

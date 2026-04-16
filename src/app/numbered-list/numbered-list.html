@@ -1,27 +1,205 @@
-<section class="numbered-section row mb-5 mt-4">
-  <div class="col-lg-8 col-12">
+<section class="numbered-section row mb-5 mt-4 ms-md-3">
+  <div class="col-12 col-md-9 px-0 px-md-3">
 
-    <div class="header__bar mb-3">
-      <i class="bi" [ngClass]="iconClass" [style.color]="iconColor"></i>
-      <h2 class="text-uppercase fw-bold fs-6 d-inline-block ms-2 m-0">{{ title }}</h2>
+    <div class="header__bar">
+      <i class="bi bi-fire" style="color: red;"></i>
+      <h2 class="text-uppercase fw-bold fs-5 mb-3 d-inline-block ms-2">{{ title }}</h2>
     </div>
 
-    <div class="row object-fit-cover mb-3">
-      <div class="col-4 col-md-3"> 
-        <div class="position-relative">
-          <img src="https://placehold.co/263x118" alt="News Image" class="img-fluid w-100">
-          <div class="position-absolute top-0 start-0 bg-dark text-white px-2 fw-bold">1</div>
-          <div class="position-absolute bottom-0 start-0 bg-primary text-white px-1" style="font-size: 10px;">LABEL</div>
+    <div class="trend-news row gx-3 mb-md-3 align-items-start">
+    <div class="col-auto col-md-4"> 
+
+      <div class="list-thumbnail position-relative">
+        <picture>
+          <source media="(min-width: 992px)" srcset="https://placehold.co/263x128">
+          <source media="(min-width: 768px)" srcset="https://placehold.co/140x90">
+          <img src="https://placehold.co/135x90" alt="Hero News Sub 3" class="img-fluid w-100 h-100 object-fit-cover">
+        </picture>
+        <div class="number-corner__box">
+          {{ title === 'Recent stories' ? '1h' : '1' }}
         </div>
+        <div class="label-corner__box">label</div>
       </div>
+  
+    </div>
+  
+    <div class="col col-md-6">
       
-      <div class="col-8 col-md-9 d-flex flex-column justify-content-center">
-        <p class="text small fw-bold mb-1">Fetterman asks federal government for increased security...</p>
-        <div class="small text-muted" style="font-size: 0.75rem;">
-          <i class="bi bi-clock"></i> {{ currentDate | date:'h:mm a, MMM d' }} 
-          <i class="bi bi-person-fill ms-2"></i> John Doe
+      <div class="text__caption">
+        <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Fetterman asks federal government for increased security during NFL Draft</a>
+      </div>
+    
+      <div class="row mt-2 d-none d-md-flex">
+        <div class="col-12 text-muted small">
+          <i class="bi bi-clock"></i>
+            <span class="ms-1">{{ currentDateTime | date:'EEE, MMM d, y, h:mm a' }}</span>
+            <div class="ms-lg-2 d-block d-lg-inline">
+              <i class="bi bi-person-fill"></i>
+              <span> John Doe</span>
+            </div>
         </div>
       </div>
+  
     </div>
+
     </div>
+    <hr class="d-md-none text-muted">
+
+    <div class="trend-news row gx-3 mb-md-3 align-items-start">
+    <div class="col-auto col-md-4"> 
+
+      <div class="list-thumbnail position-relative">
+        <picture>
+          <source media="(min-width: 992px)" srcset="https://placehold.co/263x128">
+          <source media="(min-width: 768px)" srcset="https://placehold.co/140x90">
+          <img src="https://placehold.co/135x90" alt="Hero News Sub 3" class="img-fluid w-100 h-100 object-fit-cover">
+        </picture>
+        <div class="number-corner__box">
+          {{ title === 'Recent stories' ? '2h' : '2' }}
+        </div>
+        <div class="label-corner__box">label</div>
+      </div>
+  
+    </div>
+  
+    <div class="col col-md-6">
+      
+      <div class="text__caption">
+        <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Fetterman asks federal government for increased security during NFL Draft</a>
+      </div>
+    
+      <div class="row mt-2 d-none d-md-flex">
+        <div class="col-12 text-muted small">
+          <i class="bi bi-clock"></i>
+            <span class="ms-1">{{ currentDateTime | date:'EEE, MMM d, y, h:mm a' }}</span>
+            <div class="ms-lg-2 d-block d-lg-inline">
+              <i class="bi bi-person-fill"></i>
+              <span> John Doe</span>
+            </div>
+        </div>
+      </div>
+  
+    </div>
+
+    </div>
+    <hr class="d-md-none text-muted">
+
+    <div class="trend-news row gx-3 mb-md-3 align-items-start">
+    <div class="col-auto col-md-4"> 
+
+      <div class="list-thumbnail position-relative">
+        <picture>
+          <source media="(min-width: 992px)" srcset="https://placehold.co/263x128">
+          <source media="(min-width: 768px)" srcset="https://placehold.co/140x90">
+          <img src="https://placehold.co/135x90" alt="Hero News Sub 3" class="img-fluid w-100 h-100 object-fit-cover">
+        </picture>
+        <div class="number-corner__box">
+          {{ title === 'Recent stories' ? '3h' : '3' }}
+        </div>
+        <div class="label-corner__box">label</div>
+      </div>
+  
+    </div>
+  
+    <div class="col col-md-6">
+      
+      <div class="text__caption">
+        <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Fetterman asks federal government for increased security during NFL Draft</a>
+      </div>
+    
+      <div class="row mt-2 d-none d-md-flex">
+        <div class="col-12 text-muted small">
+          <i class="bi bi-clock"></i>
+            <span class="ms-1">{{ currentDateTime | date:'EEE, MMM d, y, h:mm a' }}</span>
+            <div class="ms-lg-2 d-block d-lg-inline">
+              <i class="bi bi-person-fill"></i>
+              <span> John Doe</span>
+            </div>
+        </div>
+      </div>
+  
+    </div>
+
+    </div>
+    <hr class="d-md-none text-muted">
+
+    <div class="trend-news row gx-3 mb-md-3 align-items-start">
+    <div class="col-auto col-md-4"> 
+
+      <div class="list-thumbnail position-relative">
+        <picture>
+          <source media="(min-width: 992px)" srcset="https://placehold.co/263x128">
+          <source media="(min-width: 768px)" srcset="https://placehold.co/140x90">
+          <img src="https://placehold.co/135x90" alt="Hero News Sub 3" class="img-fluid w-100 h-100 object-fit-cover">
+        </picture>
+        <div class="number-corner__box">
+          {{ title === 'Recent stories' ? '4h' : '4' }}
+        </div>
+        <div class="label-corner__box">label</div>
+      </div>
+  
+    </div>
+  
+    <div class="col col-md-6">
+      
+      <div class="text__caption">
+        <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Fetterman asks federal government for increased security during NFL Draft</a>
+      </div>
+    
+      <div class="row mt-2 d-none d-md-flex">
+        <div class="col-12 text-muted small">
+          <i class="bi bi-clock"></i>
+            <span class="ms-1">{{ currentDateTime | date:'EEE, MMM d, y, h:mm a' }}</span>
+            <div class="ms-lg-2 d-block d-lg-inline">
+              <i class="bi bi-person-fill"></i>
+              <span> John Doe</span>
+            </div>
+        </div>
+      </div>
+  
+    </div>
+
+    </div>
+    <hr class="d-md-none text-muted">
+
+    <div class="trend-news row gx-3 mb-md-3 align-items-start">
+    <div class="col-auto col-md-4"> 
+
+      <div class="list-thumbnail position-relative">
+        <picture>
+          <source media="(min-width: 992px)" srcset="https://placehold.co/263x128">
+          <source media="(min-width: 768px)" srcset="https://placehold.co/140x90">
+          <img src="https://placehold.co/135x90" alt="Hero News Sub 3" class="img-fluid w-100 h-100 object-fit-cover">
+        </picture>
+        <div class="number-corner__box">
+          {{ title === 'Recent stories' ? '5h' : '5' }}
+        </div>
+        <div class="label-corner__box">label</div>
+      </div>
+  
+    </div>
+  
+    <div class="col col-md-6">
+      
+      <div class="text__caption">
+        <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Fetterman asks federal government for increased security during NFL Draft</a>
+      </div>
+    
+      <div class="row mt-2 d-none d-md-flex">
+        <div class="col-12 text-muted small">
+          <i class="bi bi-clock"></i>
+            <span class="ms-1">{{ currentDateTime | date:'EEE, MMM d, y, h:mm a' }}</span>
+            <div class="ms-lg-2 d-block d-lg-inline">
+              <i class="bi bi-person-fill"></i>
+              <span> John Doe</span>
+            </div>
+        </div>
+      </div>
+  
+    </div>
+
+    </div>
+    <hr class="d-md-none text-muted">
+
+  </div>
 </section>

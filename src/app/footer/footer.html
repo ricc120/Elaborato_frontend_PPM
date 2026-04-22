@@ -1,0 +1,44 @@
+<footer class="pg-footer position-relative pt-5 pb-3 mt-5">
+  
+  <div class="skyline-bg"></div>
+
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row text-center text-md-start fw-semibold fs-7 mb-4">
+      
+      <div class="col-6 col-md-3 mb-3 d-flex flex-column gap-2">
+        <a href="#" class="text-dark text-decoration-none">Archives</a>
+        <a href="#" class="text-dark text-decoration-none">Advertising</a>
+        <a href="#" class="text-dark text-decoration-none">Email Newsletter</a>
+        <a href="#" class="text-dark text-decoration-none">Products & Services</a>
+        <a href="#" class="text-dark text-decoration-none">Contact Us</a>
+        <a href="#" class="text-dark text-decoration-none">Subscribe</a>
+        <a href="#" class="text-dark text-decoration-none">Subscriber Services</a>
+      </div>
+
+      <div class="col-6 col-md-3 mb-3 d-flex flex-column gap-2">
+        <a href="#" class="text-dark text-decoration-none">PGe</a>
+        <a href="#" class="text-dark text-decoration-none">RSS Feeds</a>
+        <a href="#" class="text-dark text-decoration-none">Corrections</a>
+        <a href="#" class="text-dark text-decoration-none">Help</a>
+        <a href="#" class="text-dark text-decoration-none">Terms of Use</a>
+        <a href="#" class="text-dark text-decoration-none">Privacy Policy</a>
+        <a href="#" class="text-dark text-decoration-none">About Us</a>
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col-12 text-center fs-8 text-muted">
+        <small>Copyright © 1997-2026 PG Publishing Co. All rights reserved</small>
+      </div>
+    </div>
+
+    <button *ngIf="showScrollButton" 
+        (click)="scrollToTop()" 
+        class="btn btn-dark position-fixed bottom-0 end-0 m-3 m-md-5 rounded-1 shadow-sm d-flex flex-column align-items-center p-2" 
+        style="z-index: 999; background-color: #222;">
+  <i class="bi bi-chevron-up fw-bold"></i>
+  <span style="font-size: 0.7rem; font-weight: bold;">TOP</span>
+</button>
+  </div>
+</footer>

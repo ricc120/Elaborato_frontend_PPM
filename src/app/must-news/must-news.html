@@ -1,0 +1,138 @@
+<section class="must-see-section row mb-sm-3 mb-md-5 mt-4 px-md-3 ms-md-1">
+  <div class="col-12 col-md-9 px-0 px-md-3"> 
+
+    <div class="header__bar">
+      <div class="col-12 col-md-4 pe-md-4 pe-lg-2 ">
+        <div class="border-top border-3 solid border-dark d-none d-md-block w-100"></div>
+          <h2 class="text-uppercase fw-bold fs-5 d-inline-block mt-md-2 mt-lg-0 ms-2 mb-3">{{ title }}</h2>
+      </div>
+    </div>
+
+    <div class="must-see-wrapper px-0">
+      <div class="row gx-3 ">
+        
+        <div class="col-12 col-lg-4 mb-0 mb-md-3 mb-lg-0">
+          <div class="row g-2 g-md-3">
+            
+            <div class="col-auto col-md-4 col-lg-12">
+              <div class="must-see-img position-relative">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="https://placehold.co/210x157">
+                  <source media="(min-width: 768px)" srcset="https://placehold.co/100">
+                  <img src="https://placehold.co/135x90" alt="Must See 1" class="img-fluid w-100 h-100 object-fit-cover">
+                </picture>
+
+                <i *ngIf="contentType === 'photo'" 
+                  class="bi bi-camera position-absolute bottom-0 start-0 m-1 text-white fs-5" 
+                  style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                </i>
+
+                <div *ngIf="contentType === 'label'" 
+                    class="label-corner__box">
+                  label
+                </div>
+
+              </div>
+            </div>
+            
+            <div class="col col-md-8 col-lg-12">
+              <div class="text__caption mt-0 mt-lg-2">
+                <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Steelers NFL draft visits: Taylen Green a serious QB option? Spencer Fano a fit at OT & OG?</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <hr class="d-md-none text-muted">
+
+        <div class="col-12 col-lg-4 mb-0 mb-md-3 mb-lg-0">
+          <div class="row g-2 g-md-3">
+            
+            <div class="col-auto col-md-4 col-lg-12">
+              <div class="must-see-img position-relative">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="https://placehold.co/210x157">
+                  <source media="(min-width: 768px)" srcset="https://placehold.co/100">
+                  <img src="https://placehold.co/135x90" alt="Must See 1" class="img-fluid w-100 h-100 object-fit-cover">
+                </picture>
+                
+                <i *ngIf="contentType === 'photo'" 
+                  class="bi bi-camera position-absolute bottom-0 start-0 m-1 text-white fs-5" 
+                  style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                </i>
+
+                <div *ngIf="contentType === 'label'" 
+                    class="label-corner__box">
+                  label
+                </div>
+
+              </div>
+            </div>
+            
+            <div class="col col-md-8 col-lg-12">
+              <div class="text__caption mt-0 mt-lg-2">
+                <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Steelers NFL draft visits: Taylen Green a serious QB option? Spencer Fano a fit at OT & OG?</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <hr class="d-md-none text-muted">
+
+        <div class="col-12 col-lg-4 mb-0 mb-md-3 mb-lg-0">
+          <div class="row g-2 g-md-3">
+
+            <div class="col-auto col-md-4 col-lg-12">
+              <div class="must-see-img position-relative">
+                <picture>
+                  <source media="(min-width: 992px)" srcset="https://placehold.co/210x157">
+                  <source media="(min-width: 768px)" srcset="https://placehold.co/100">
+                  <img src="https://placehold.co/135x90" alt="Must See 1" class="img-fluid w-100 h-100 object-fit-cover">
+                </picture>
+                <i *ngIf="contentType === 'photo'" 
+                  class="bi bi-camera position-absolute bottom-0 start-0 m-1 text-white fs-5" 
+                  style="text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">
+                </i>
+
+                <div *ngIf="contentType === 'label'" 
+                    class="label-corner__box">
+                  label
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="col col-md-8 col-lg-12">
+              <div class="text__caption mt-0 mt-lg-2">
+                <a href="#" class="fw-semibold text-decoration-none text-dark link-primary">Steelers NFL draft visits: Taylen Green a serious QB option? Spencer Fano a fit at OT & OG?</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <hr class="d-md-none text-muted">
+
+      </div>
+
+      <ng-container *ngIf="showButton">
+        <div class="d-md-none mt-3 pb-3">
+          <a href="#" class="btn btn-dark btn-sm mx-2 fw-bold w-100 d-flex justify-content-center align-items-center text-uppercase text-light small fw-bold btn-custom-category">
+            MORE VIDEOS <i class="bi bi-arrow-right-circle ms-1"></i>
+          </a>
+        </div>
+
+        <div class="d-none d-md-flex justify-content-end align-items-center mt-3 pb-3">
+          <a href="#" class="text-decoration-none small text-dark d-flex align-items-center">
+            <i class="bi bi-play-circle-fill fs-5 me-2" style="color: #1fb25a"></i> More Videos <i class="bi bi-arrow-right-circle-fill ms-1" style="color: #1fb25a;"></i>
+          </a>
+          <span class="mx-3 text-muted">|</span>
+          <a href="#" class="text-decoration-none small text-dark d-flex align-items-center link-primary">
+            <i class="bi bi-camera-fill fs-5 me-2" style="color: #1fb25a;"></i> Pittsburgh in Focus photo blog
+          </a>
+        </div>
+      </ng-container>
+      
+      </div>
+       
+  </div>
+</section>

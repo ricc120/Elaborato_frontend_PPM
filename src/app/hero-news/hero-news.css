@@ -17,39 +17,6 @@
     margin-right: 100px;
 }
 
-
-.number-corner__box {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 60px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 8px;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-family: proxima-nova, Roboto, Arial, san-serif;
-    font-weight: 500;
-    font-size: 0.9rem;
-    background-color: brightness(70%);
-    text-align: center;
-    color: white;
-}
-
-.label-corner__box {
-
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: white;
-    font-family: proxima-nova, Roboto, Arial, san-serif;
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    background-color: #00ff6e;
-    z-index: 9;
-}
-
 @media (max-width: 1200px) {
     .main-container {
         margin-left: 0%;
@@ -73,76 +40,105 @@
         display: none;
     }
 
-  .trend-news .list-thumbnail {
-    width: 135px;
-  }
-  
-  .trend-news .list-thumbnail img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
-
-  .header__bar {
-        background-color: #eee;
+    .just-in-img { 
+        width: 135px;
+        aspect-ratio: 4 / 3; 
     }
 
     hr {
-    width: 100%;
-    border-top: 5px solid #ccc;
-    opacity: 0.5;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
+        width: 100%;
+        border-top: 5px solid #ccc;
+        opacity: 0.5;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
-  .number-corner__box {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 30px;
-        height: 15px;
-        line-height: 15px;
-        padding: 0 8px;
-        background-color: rgba(0, 0, 0, 0.7);
-        font-family: proxima-nova, Roboto, Arial, san-serif;
-        font-weight: 500;
-        font-size: 0.9rem;
-        background-color: brightness(70%);
-        text-align: center;
-        color: white;
+    .header__bar {
+        background-color: #eee;
     }
 
     
+   .label-corner__box {
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    font-family: proxima-nova, Roboto, Arial, san-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background-color: #00ff6e;
+    z-index: 9;
+}
 
 }
 
+.news-hero-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+}
+
+.news-hero-caption a {
+  color: #ffffff !important;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
+}
+
 @media (min-width: 768px) {
-    
-    .text__caption {
-        font-size: large;
+    .just-in-img { 
+        width: 100%; 
+        aspect-ratio: 4 / 3;
     }
 
-    .number-corner__box {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 40px;
-        height: 20px;
-        line-height: 20px;
-        padding: 0 8px;
-        background-color: rgba(0, 0, 0, 0.7);
-        font-family: proxima-nova, Roboto, Arial, san-serif;
-        font-weight: 500;
-        font-size: 0.9rem;
-        background-color: brightness(70%);
-        text-align: center;
-        color: white;
+    .must-see-img {
+        aspect-ratio: 4 / 3;
     }
 
-    .trend-news .list-thumbnail {
-        width: 100%;
-    }
+    .label-corner__box {
 
-    .trend-news .list-thumbnail img {
-        aspect-ratio: 140 / 90;
-    }
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    font-family: proxima-nova, Roboto, Arial, san-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    background-color: #00ff6e;
+    z-index: 9;
+}
+}
+
+@media (min-width: 1200px) {
+  .must-see-img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+}
+
+.btn-custom-category:hover {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #ffffff;
+}
+
+
+
+
+.label-static {
+    display: inline-block;
+    color: white;
+    background-color: #00ff6e;
+    font-family: proxima-nova, Roboto, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    width: fit-content;
+    z-index: 9;
 }

@@ -29,7 +29,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm run build -- --base-href /Elaborato_frontend_PPM/ 
+        run: pnpm run build --base-href /Elaborato_frontend_PPM/ 
         
 
       - name: Upload Artifacts

@@ -1,28 +1,25 @@
-@media (max-width: 768px) {
-  .main-header h1 {
-    font-size: 1.4rem !important;
-  }
-
-  .form-control {
-    font-size: 0.85rem;
-  }
-}
-
-/* Quando il mouse passa sul contenitore principale, mostra il sottomenu */
 .custom-hover-dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* Opzionale: Assicura che la freccia dia un feedback visivo */
 .custom-hover-dropdown:hover i {
-  color: #1fb25a; /* Cambia colore all'hover (es. il verde del sito) */
+  color: #1fb25a;
 }
 
-/* Evita che il menu scompaia se c'è un piccolo spazio tra il testo e la tendina */
 .custom-hover-dropdown .dropdown-menu {
-  margin-top: 0; 
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  right: 0 !important; 
+  left: auto !important;
+  min-width: 140px;
+  margin-top: 0;
+  z-index: 9999999 !important; 
 }
 
-.header-actions {
-  margin-bottom: 0%;
+.header-actions a,
+.header-date-weather {
+  font-size: 0.72rem !important;
+  letter-spacing: 0.2px;
+  white-space: nowrap; 
 }

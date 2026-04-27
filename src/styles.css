@@ -1,8 +1,6 @@
-/* Bootstrap Import */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
-/* Global Styles */
 .top-bar {
   height: 70px;
 }
@@ -13,9 +11,34 @@
   border-top: 4px solid #1fb25a; 
 }
 
-/* Additional Global Styles */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+header.main-bar {
+  display: contents !important;
+}
+
+app-navbar {
+  display: block !important;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 999999 !important; 
+}
+
+body.menu-pushed {
+  overflow-x: hidden; 
+}
+
+body.menu-pushed app-main, 
+body.menu-pushed .main-container {
+  transform: translateX(320px);
+  transition: transform 0.3s ease-in-out;
+}
+
+app-main, .main-container {
+  transition: transform 0.3s ease-in-out;
 }

@@ -1,87 +1,423 @@
-<nav class="navbar-expand-lg main-navbar" aria-label="Main navigation">
-    <div class="row d-flex justify-content-between py-3">
-    <!-- Navbar Toggle Button for Mobile -->
-    <button 
-      class="navbar-toggler border-0 ms-3" 
-      type="button" 
-      (click)="toggleNav()"
-      [attr.aria-expanded]="!isNavCollapsed()"
-      aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div #navWrapper class="nav-placeholder">
+<nav #mainNavbar class="main-navbar w-100 position-relative" aria-label="Main navigation">
+  <div class="d-flex justify-content-between align-items-center px-3 py-2 w-100">
 
-     <!-- Left Navbar -->
-      <div class="col-auto d-flex align-self-end">
-        <div class="menu-icon d-flex align-items-center text-muted small px-2">
-          <i class="bi bi-list" style="color: #fff"></i>
-          Menu
-        </div>
-        <div class="auth-list d-flex justify-content-center">
-          <ul class="navbar-nav d-flex flex-row">
-            <li class="nav-item">
-              <button class="btn btn-sm btn-outline-light ms-2" aria-label="Subscribe">
-                <a href="#" class="text-decoration-none text-uppercase text-white small">Subscribe</a>
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-sm btn-outline-light ms-2" aria-label="Login">
-                <a href="#" class="text-decoration-none text-uppercase text-white small mx-2">Login</a>
-              </button>
-            </li>
-            <li class="nav-item">
-              <button class="btn btn-sm btn-outline-light ms-2" aria-label="Register">
-                <a href="#" class="text-decoration-none text-uppercase text-white small">Register</a>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- Center Navbar-->
-      <div class="col-auto d-flex align-self-center justify-content-center">
-          <ul class="center-nav text-muted small">
-            <a href="https://post-gazette.com" class="text-decoration-none text-white small">Home | </a> 
-            <a href="https://post-gazette.com/news" class="text-decoration-none text-white small">News | </a> 
-            <a href="https://post-gazette.com/local" class="text-decoration-none text-white small">Local | </a> 
-            <a href="https://post-gazette.com/sports" class="text-decoration-none text-white small">Sports | </a>
-            <a href="https://post-gazette.com/opinion" class="text-decoration-none text-white small">Opinion | </a> 
-            <a href="https://post-gazette.com/ae" class="text-decoration-none text-white small">A&E | </a> 
-            <a href="https://post-gazette.com/life" class="text-decoration-none text-white small">Life | </a>
-            <a href="https://post-gazette.com/business" class="text-decoration-none text-white small">Business | </a>
-            <a href="https://post-gazette.com/help" class="text-decoration-none text-white small">Contact Us | </a> 
-            <a href="#" class="text-decoration-none text-white small">Public Notices </a>
-            </ul>
-      </div>
+    <div class="d-flex align-items-center gap-2 gap-md-3 flex-shrink-0">
+      <button class="btn text-white d-flex flex-column align-items-center p-0 border-0 shadow-none">
+        <i class="bi bi-list fs-2" style="line-height: 0.8;"></i>
+        <span class="fw-bold" style="font-size: 0.65rem;">MENU</span>
+      </button>
 
-      <!-- Right Navbar -->
-      <div class="col-auto d-flex align-self-end px-4">
-        <div class="social-bar d-flex justify-content-center ms-3">
-          <ul class="navbar-nav d-flex flex-row">
-            <li class="nav-item">
-              <a href="#" class="text-decoration-none text-white small">
-                <i class="bi bi-facebook"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="text-decoration-none text-white small mx-2">
-                <i class="bi bi-twitter"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="text-decoration-none text-white small">
-                <i class="bi bi-instagram"></i>
-              </a>
-            </li>
-          </ul>
+      <div class="d-none d-md-flex gap-2">
+        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;">SUBSCRIBE</a>
+        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;">LOGIN</a>
+        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;">REGISTER</a>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center flex-grow-1 mx-2">
+      
+      <a href="/" class="text-white text-decoration-none me-3 mb-2 d-md-none">
+        <span class="fw-bold" style="font-family: 'Playfair Display', Georgia, serif; font-size: 2.2rem; line-height: 1;">pg</span>
+      </a>
+
+      <a href="/" class="text-white text-decoration-none me-3 mb-2 d-none d-md-block" [class.d-md-none]="!isScrolled">
+        <span class="fw-bold" style="font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; line-height: 1;">pg</span>
+      </a>
+
+      <div class="d-none d-lg-flex align-items-center gap-2 text-nowrap ">
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative ">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Home</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+            
+          </div>
+
         </div>
-        <div class="d-flex justify-content-center ms-3">
-          <button class="btn btn-sm btn-outline-light ms-2" aria-label="Search">
-            <i class="bi bi-search"></i>
-          </button>
+
+        <span class="nav-separator text-secondary px-1">|</span>
+
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">News</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+            
+          </div>
+
         </div>
-        <div class="newsletter d-flex justify-content-center ms-3">
-          <button class="btn btn-sm btn-outline-light ms-2" aria-label="Newsletter">
-            <a href="#" class="text-decoration-none text-uppercase text-white small">Newsletter</a>
-          </button>
+
+        <span class="nav-separator text-secondary px-1">|</span>
+
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Local</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+            
+          </div>
+
         </div>
+
+        <span class="nav-separator text-secondary px-1">|</span>
+
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Sports</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+
+        <span class="nav-separator text-secondary px-1">|</span>
+        
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <span class="nav-separator text-secondary px-1">|</span>
+        
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">A&E</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+
+        <span class="nav-separator text-secondary px-1">|</span>
+
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Life</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+
+        <span class="nav-separator text-secondary px-1">|</span>
+
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Business</a>
+            
+          <div class="mega-menu-box text-wrap">
+          
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
+              <i class="bi bi-x-lg"></i>
+            </button>
+
+            <div class="row border-start border-3 solid w-100 m-0">
+            
+              <div class="col-5 pe-3 d-flex flex-column gap-3">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                </a>
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                </a>
+              </div>
+
+              <div class="col-4 px-3 position-relative">
+                <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
+                <a href="#" class="text-white text-decoration-none small article-link link-secondary">
+                  <strong> Olson: Social media's psychological tricks </strong>
+                </a>
+              </div>
+
+              <div class="col-3 ps-3 d-flex flex-column gap-2">
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion Home</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Editorials</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">PG Columnists</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Insight</a>
+                <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Letters</a>
+              </div>
+
+            </div>
+            
+          </div>
+
+        </div>
+
+        <span class="nav-separator text-secondary px-1 d-lg-none d-xl-block">|</span>
+
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative d-lg-none d-xl-block">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary d-lg-none d-xl-block">Contact Us</a>
+        </div>
+
+        <span class="nav-separator text-secondary px-1 d-lg-none d-xl-block">|</span>
+
+        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative d-lg-none d-xl-block">
+          <a href="#" class="text-white text-decoration-none small fw-bold link-secondary d-lg-none d-xl-block">Public Notices</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center gap-2 gap-md-3 flex-shrink-0">
+      <div class="d-none d-md-flex gap-2 align-items-center">
+        <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
+        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+      </div>
+      
+      <a href="#" class="text-white fs-5 fw-bold"><i class="bi bi-search"></i></a>
+      <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1 d-none d-md-block" style="font-size: 0.7rem;">NEWSLETTERS</a>
+    </div>
+
   </div>
-
+</nav>
+</div>

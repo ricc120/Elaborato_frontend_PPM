@@ -1,12 +1,11 @@
 import { Component, Input } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { AdBannerComponent } from "../ad-banner/ad-banner";
 
 @Component({
     selector: 'app-must-news',
     templateUrl: './must-news.html',
     styleUrl: './must-news.css',
-    imports: [CommonModule,AdBannerComponent],
+    imports: [CommonModule],
 })
 
 export class MustNews {

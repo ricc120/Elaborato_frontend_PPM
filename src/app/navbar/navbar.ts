@@ -1,4 +1,4 @@
-import { Component, signal } from "@angular/core";
+import { Component, ElementRef, HostListener, signal, ViewChild } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 interface NavItem {
@@ -27,7 +27,15 @@ export class Navbar {
     { label: 'Politics', path: '/politics', icon: 'bi-building' },
   ];
 
-  toggleNav() {
-    this.isNavCollapsed.set(!this.isNavCollapsed());
+  isScrolled: boolean = false;
+
+  @ViewChild('mainNavbar') navbarElement!: ElementRef;
+  
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (this.navbarElement) {  
+      const navPosition = this.navbarElement.nativeElement.getBoundingClientRect().top;
+      this.isScrolled = navPosition <= 0;
+    }
   }
 }

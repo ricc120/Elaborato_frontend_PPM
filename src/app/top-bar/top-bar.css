@@ -1,12 +1,12 @@
-.custom-hover-dropdown:hover .dropdown-menu {
+.custom-hover--dropdown:hover:hover .dropdown-menu {
   display: block;
 }
 
-.custom-hover-dropdown:hover i {
+.custom-hover--dropdown:hover i {
   color: #1fb25a;
 }
 
-.custom-hover-dropdown .dropdown-menu {
+.custom-hover--dropdown .dropdown-menu {
   display: none; 
   position: absolute;
   top: 100%; 
@@ -17,8 +17,8 @@
   z-index: 9999999 !important; 
 }
 
-.header-actions a,
-.header-date-weather {
+.header--actions a,
+.header--date-weather {
   font-size: 0.72rem !important;
   letter-spacing: 0.2px;
   white-space: nowrap; 

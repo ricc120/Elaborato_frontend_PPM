@@ -5,16 +5,20 @@
   height: 70px;
 }
 
-.bottom-nav {
-  height: 50px;
-  background-color: #222;
-  border-top: 4px solid #1fb25a; 
-}
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
+  overflow-x: clip; 
+  max-width: 100%;
+}
+
+article {
+  transition: margin-left 0.3s ease;
+}
+
+article.drawer-open {
+  margin-left: 260px;
 }
 
 header.main-bar {
@@ -27,18 +31,4 @@ app-navbar {
   position: sticky !important;
   top: 0 !important;
   z-index: 999999 !important; 
-}
-
-body.menu-pushed {
-  overflow-x: hidden; 
-}
-
-body.menu-pushed app-main, 
-body.menu-pushed .main-container {
-  transform: translateX(320px);
-  transition: transform 0.3s ease-in-out;
-}
-
-app-main, .main-container {
-  transition: transform 0.3s ease-in-out;
 }

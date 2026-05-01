@@ -1,17 +1,17 @@
-<div #navWrapper class="nav-placeholder">
-<nav #mainNavbar class="main-navbar w-100 position-relative" aria-label="Main navigation">
+<div #navWrapper class="nav__placeholder">
+<nav #mainNavbar class="main__navbar w-100 position-relative" aria-label="Main navigation">
   <div class="d-flex justify-content-between align-items-center px-3 py-2 w-100">
 
     <div class="d-flex align-items-center gap-2 gap-md-3 flex-shrink-0">
-      <button class="btn text-white d-flex flex-column align-items-center p-0 border-0 shadow-none">
-        <i class="bi bi-list fs-2" style="line-height: 0.8;"></i>
+      <button class="btn text-white d-flex flex-column align-items-center p-0 border-0 shadow-none" (click)="toggleDrawer()" aria-label="Toggle menu" [attr.aria-expanded]="drawerOpen" aria-controls="mobileSidebar">
+        <i class="bi bi-list fs-2" style="line-height: 0.8;" aria-hidden="true"></i>
         <span class="fw-bold" style="font-size: 0.65rem;">MENU</span>
       </button>
 
       <div class="d-none d-md-flex gap-2">
-        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;">SUBSCRIBE</a>
-        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;">LOGIN</a>
-        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;">REGISTER</a>
+        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;" aria-label="Subscribe">SUBSCRIBE</a>
+        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;" aria-label="Login">LOGIN</a>
+        <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1" style="font-size: 0.7rem;" aria-label="Register">REGISTER</a>
       </div>
     </div>
 
@@ -26,33 +26,33 @@
       </a>
 
       <div class="d-none d-lg-flex align-items-center gap-2 text-nowrap ">
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative ">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative ">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Home</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #1fb25a !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a.</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a.</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -70,35 +70,35 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1">|</span>
+        <span class="nav__separator text-secondary px-1">|</span>
 
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">News</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #98ba48 !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -116,35 +116,35 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1">|</span>
+        <span class="nav__separator text-secondary px-1">|</span>
 
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Local</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #e2cd3e !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -162,35 +162,35 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1">|</span>
+        <span class="nav__separator text-secondary px-1">|</span>
 
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Sports</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #d48e45 !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -208,35 +208,35 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1">|</span>
+        <span class="nav__separator text-secondary px-1">|</span>
         
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Opinion</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #d76563 !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -254,35 +254,35 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1">|</span>
+        <span class="nav__separator text-secondary px-1">|</span>
         
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">A&E</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #d75da6 !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -300,35 +300,35 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1">|</span>
+        <span class="nav__separator text-secondary px-1">|</span>
 
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Life</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #b066d3 !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -346,35 +346,35 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1">|</span>
+        <span class="nav__separator text-secondary px-1">|</span>
 
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary">Business</a>
             
-          <div class="mega-menu-box text-wrap">
+          <div class="mega-menu--box text-wrap">
           
-            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;">
-              <i class="bi bi-x-lg"></i>
+            <button class="btn btn-outline-light btn-sm position-absolute rounded-0 border-2 fw-bold" style="top: 10px; right: 10px; padding: 2px 8px; z-index: 10;" aria-label="Close menu">
+              <i class="bi bi-x-lg" aria-hidden="true"></i>
             </button>
 
-            <div class="row border-start border-3 solid w-100 m-0">
+            <div class="row border-start border-3 solid w-100 m-0" style="border-color: #7389d9 !important;">
             
               <div class="col-5 pe-3 d-flex flex-column gap-3">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Adriana E. Ramirez: Trump administration gets it right on weed</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Jonathan D. Salant: Trump's tariffs erased Trump's tax cuts</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a</strong>
                 </a>
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong>Carl A. Marrara and Brian Kennedy: Pennsylvania's huge advantage in the AI future</strong>
+                  <strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius urna non urna.</strong>
                 </a>
               </div>
 
               <div class="col-4 px-3 position-relative">
                 <img src="https://placehold.co/135x90?text=Instagram" class="img-fluid w-100 object-fit-cover mb-2" alt="Img" style="aspect-ratio: 4 / 3;">
                 <a href="#" class="text-white text-decoration-none small article-link link-secondary">
-                  <strong> Olson: Social media's psychological tricks </strong>
+                  <strong> Lorem ipsum dolor sit amet. </strong>
                 </a>
               </div>
 
@@ -392,15 +392,15 @@
 
         </div>
 
-        <span class="nav-separator text-secondary px-1 d-lg-none d-xl-block">|</span>
+        <span class="nav__separator text-secondary px-1 d-lg-none d-xl-block">|</span>
 
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative d-lg-none d-xl-block">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative d-lg-none d-xl-block">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary d-lg-none d-xl-block">Contact Us</a>
         </div>
 
-        <span class="nav-separator text-secondary px-1 d-lg-none d-xl-block">|</span>
+        <span class="nav__separator text-secondary px-1 d-lg-none d-xl-block">|</span>
 
-        <div class="mega-dropdown-wrapper h-100 d-flex align-items-center position-relative d-lg-none d-xl-block">
+        <div class="mega-dropdown--wrapper h-100 d-flex align-items-center position-relative d-lg-none d-xl-block">
           <a href="#" class="text-white text-decoration-none small fw-bold link-secondary d-lg-none d-xl-block">Public Notices</a>
         </div>
 
@@ -409,14 +409,82 @@
 
     <div class="d-flex align-items-center gap-2 gap-md-3 flex-shrink-0">
       <div class="d-none d-md-flex gap-2 align-items-center">
-        <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white fs-5" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+        <a href="#" class="text-white fs-5" aria-label="Twitter"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+        <a href="#" class="text-white fs-5" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
       </div>
       
-      <a href="#" class="text-white fs-5 fw-bold"><i class="bi bi-search"></i></a>
+      <a href="#" class="text-white fs-5 fw-bold" aria-label="Search"><i class="bi bi-search" aria-hidden="true"></i></a>
       <a href="#" class="btn btn-outline-secondary text-white btn-sm fw-bold px-2 py-1 d-none d-md-block" style="font-size: 0.7rem;">NEWSLETTERS</a>
     </div>
+
+  </div>
+</nav>
+<nav class="side-drawer" [class.open]="drawerOpen" aria-label="Mobile navigation" >
+  <div class="side-drawer--inner">
+
+    <div class="drawer-section--label">ACCOUNT</div>
+    <a href="#" class="drawer-item drawer-item--icon" aria-label="Subscribe">
+      <i class="bi bi-person-plus" aria-hidden="true"></i> Subscribe
+    </a>
+    <a href="#" class="drawer-item drawer-item--icon" aria-label="Login">
+      <i class="bi bi-lock" aria-hidden="true"></i> Login
+    </a>
+    <a href="#" class="drawer-item drawer-item--icon" aria-label="Register">
+      <i class="bi bi-person" aria-hidden="true"></i> Register
+    </a>
+    <a href="#" class="drawer-item drawer-item--icon" aria-label="Subscriber Services">
+      <i class="bi bi-info-circle" aria-hidden="true"></i> Subscriber Services
+    </a>
+    <a href="#" class="drawer-item drawer-item--icon" aria-label="Search">
+      <i class="bi bi-search" aria-hidden="true"></i> Search
+    </a>
+    
+    <div class="drawer-section--label mt-2">SECTIONS</div>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #1fb25a;">
+      HOME <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #98ba48;">
+      NEWS <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #e2cd3e;">
+      LOCAL <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #d48e45;">
+      SPORTS <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #d76563;">
+      OPINION <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #d75da6;">
+      A&E <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #b066d3;">
+      LIFE <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+    <a href="#" class="drawer-item drawer-item--section" style="--section-color: #7389d9;">
+      BUSINESS <i class="bi bi-chevron-right ms-auto" aria-hidden="true"></i>
+    </a>
+
+    <div class="drawer-section--label mt-3">OTHER</div>
+    <a href="#" class="drawer-item drawer-item--other ms-4">PGe</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Newsletters</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">PG Store</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Archives</a>
+
+
+    <div class="drawer-section--label mt-3">CLASSIFIEDS</div>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Public Notices</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Obituaries</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Jobs</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Classifieds</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Events</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Pets</a>
+
+    <div class="drawer-section--label mt-3">CONTACT US / FAQ</div>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Contact Us</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Advertising</a>
+    <a href="#" class="drawer-item drawer-item--other ms-4">Career Opportunities</a>
 
   </div>
 </nav>

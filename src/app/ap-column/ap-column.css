@@ -1,15 +1,15 @@
 @media (min-width: 768px) {
-  .ap-hero-item img {
+  .ap-column__hero-item img {
     aspect-ratio: 4 / 3; 
     width: 100%;
 
   }
 
-  .ap-hero-item img:hover{
+  .ap-column__hero-item img:hover{
     filter: brightness(70%);
   }
 
-  .ap-hero-caption {
+  .ap-column__hero-caption {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -17,29 +17,29 @@
     background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
   }
 
-  .ap-hero-caption a {
+  .ap-column__hero-caption a {
     color: #ffffff !important;
     font-weight: bold;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
   }
 
-  .story-row a {
+  .ap-column__story-row a {
     font-size: large;
   }
   
 }
 
 @media (min-width: 992px) {
-   .list-thumbnail {
+   .ap-column__list-thumbnail {
     width: 65px;
   }
 
-  .story-row a,
-  .ap-hero-caption a {
+  .ap-column__story-row a,
+  .ap-column__hero-caption a {
     font-size: 0.9rem;
   }
 
-  .ap-hero-item img {
+  .ap-column__hero-item img {
     aspect-ratio: 4 / 3;
   }
 }

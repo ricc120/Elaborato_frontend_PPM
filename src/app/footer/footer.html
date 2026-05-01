@@ -1,6 +1,6 @@
 <div class="position-relative">
     
-  <div class="footer-body position-relative">
+  <nav class="footer__body position-relative" aria-label="Footer links">
     <div class="row text-center fw-semibold" style="font-size: 0.75rem;">
       
       <div class="col-6 d-flex flex-column gap-2 text-end pe-3">
@@ -24,26 +24,22 @@
       </div>
 
       <div class="text-center text-dark mt-3" style="font-size: 0.55rem;">
-      Copyright © 1997-2026 PG Publishing Co. All rights reserved
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in.
     </div>
       
     </div>
 
-    
-
     <button *ngIf="showScrollButton" 
-
         (click)="scrollToTop()" 
 
         class="btn btn-dark position-fixed bottom-0 end-0 m-3 m-md-5 rounded-1 shadow-sm d-flex flex-column align-items-center p-2" 
 
-        style="z-index: 999; background-color: #222;">
+        style="z-index: 999; background-color: #222;" aria-label="Scroll to top">
 
-  <i class="bi bi-chevron-up fw-bold"></i>
+      <i class="bi bi-chevron-up fw-bold" aria-hidden="true"></i>
 
-  <span style="font-size: 0.7rem; font-weight: bold;">TOP</span>
-
-</button>
-  </div>
+      <span style="font-size: 0.7rem; font-weight: bold;">TOP</span>
+    </button>
+  </nav>
 
 </div>

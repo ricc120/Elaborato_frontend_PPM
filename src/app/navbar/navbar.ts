@@ -28,6 +28,14 @@ export class Navbar {
   ];
 
   isScrolled: boolean = false;
+  drawerOpen = false;
+
+  toggleDrawer() {
+    this.drawerOpen = !this.drawerOpen;
+    const article = document.querySelector('article');
+      article?.classList.toggle('drawer-open', this.drawerOpen);
+
+  }
 
   @ViewChild('mainNavbar') navbarElement!: ElementRef;
   

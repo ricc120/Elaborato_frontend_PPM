@@ -1,27 +1,26 @@
-
 @media (max-width: 767px) {
-.trend-news .list-thumbnail {
-    width: 135px;
-  }
-  
-  .trend-news .list-thumbnail img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
+    .numbered-news .list-thumbnail {
+        width: 135px;
+    }
 
-  .header__bar {
+    .numbered-news .list-thumbnail img {
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+    }
+
+    .header__bar {
         background-color: #eee;
     }
 
     hr {
-    width: 100%;
-    border-top: 5px solid #ccc;
-    opacity: 0.5;
-    margin-bottom: 0;
-    margin-top: 0;
-  }
+        width: 100%;
+        border-top: 5px solid #ccc;
+        opacity: 0.5;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
 
-  .number-corner__box {
+    .number--corner {
         position: absolute;
         left: 0;
         top: 0;
@@ -37,18 +36,14 @@
         text-align: center;
         color: white;
     }
-
-    
-
 }
 
-@media (min-width: 768px) {
-    
+@media (min-width: 768px) {   
     .text__caption {
         font-size: large;
     }
 
-    .number-corner__box {
+    .number--corner {
         position: absolute;
         left: 0;
         top: 0;
@@ -65,16 +60,16 @@
         color: white;
     }
 
-    .trend-news .list-thumbnail {
+    .numbered-news .list-thumbnail {
         width: 100%;
     }
 
-    .trend-news .list-thumbnail img {
+    .numbered-news .list-thumbnail img {
         aspect-ratio: 140 / 90;
     }
 }
 
-.number-corner__box {
+.number--corner {
     position: absolute;
     left: 0;
     top: 0;
@@ -91,8 +86,7 @@
     color: white;
 }
 
-.label-corner__box {
-
+.label--corner {
     display: inline-block;
     position: absolute;
     top: 0;

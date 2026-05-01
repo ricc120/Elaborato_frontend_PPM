@@ -1,11 +1,10 @@
-.btn-custom-category:hover {
+.btn--custom-category:hover {
   background-color: #0d6efd;
   border-color: #0d6efd;
   color: #ffffff;
 }
 
-.label-corner__box {
-
+.label--corner{
     display: inline-block;
     position: absolute;
     bottom: 0;
@@ -21,23 +20,23 @@
 
 @media (min-width: 768px) {
     
-    .must-see-img {
+    .must-see__img {
         width: 100%;
     } 
 
 
-    .must-see-img img {
+    .must-see__img img {
         aspect-ratio: 4 / 3;
     }
 }
 
 @media (max-width: 767px) {
     
-    .must-see-img {
+    .must-see__img {
         width: 135px;
     }
 
-    .must-see-img img {
+    .must-see__img img {
         aspect-ratio: 4 / 3;
     }
 

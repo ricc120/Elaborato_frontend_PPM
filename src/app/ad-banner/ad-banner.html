@@ -1,21 +1,27 @@
-<aside class="sidebar-wrapper d-none d-md-block pe-xl-3 position-relative">
+<aside class="sidebar-wrapper pe-xl-3 position-relative d-flex flex-column gap-4">
   
-  <div class="border-bottom border-dark border-4 solid">
-    <div class="mb-4">
-      <img src="https://placehold.co/300x600" class="img-fluid w-100 object-fit-cover" alt="Adv">
-    </div>
+  <div class="border-bottom border-dark border-4 pb-4">
+    <img src="https://placehold.co/300x600" class="img-fluid w-100 object-fit-cover" alt="Advertisement 1">
   </div>
 
-   <div class="mt-4 border-bottom border-dark border-4 solid">
-    <div class="mb-4">
-      <img src="https://placehold.co/300x600?text=Instagram" class="img-fluid w-100 object-fit-cover" alt="Adv">
-    </div>
+  <div class="border-bottom border-dark border-4 pb-4">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="https://placehold.co/300x500?text=Instagram">
+      <img src="https://placehold.co/300x600?text=Instagram" class="img-fluid w-100 object-fit-cover" alt="Advertisement 2">
+    </picture>
   </div>
 
-  <div>
-    <div class="mt-4 d-xl-none">
-      <img src="https://placehold.co/300x600" class="img-fluid w-100 object-fit-cover" alt="Adv">
-    </div>
+  <div class="d-xl-none border-bottom border-dark border-4 pb-4">
+    <picture>
+      <source media="(min-width: 992px)" srcset="https://placehold.co/300x400">
+      <source media="(min-width: 768px)" srcset="https://placehold.co/300x600">
+      <img src="https://placehold.co/300x400" class="img-fluid w-100 object-fit-cover" alt="Advertisement 3">
+    </picture>
   </div>
+
+  <div class="d-lg-none border-bottom border-dark border-4 pb-4">
+    <img src="https://placehold.co/300x400" class="img-fluid w-100 object-fit-cover" alt="Advertisement 2">
+  </div>
+
 
 </aside>

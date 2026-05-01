@@ -2,7 +2,7 @@
   <div class="row align-items-end">
     
     <div class="col-md-6 col-lg-3 order-2 order-lg-1 d-flex pb-1 mt-3 mt-lg-0">
-      <div class="text-muted small header-date-weather">
+      <div class="text-muted small header--date-weather">
         <time>{{ currentDate | date:'EEEE, MMMM d, yyyy' }} {{ currentTime }}</time> |
         <a href="#" class="text-decoration-none text-dark ms-1" aria-label="Weather">
           <i class="bi bi-thermometer-sun"></i>
@@ -19,15 +19,15 @@
     </div>
 
     <div class="col-md-6 col-lg-3 order-3 order-lg-3 d-flex justify-content-end pb-1 mt-3 mt-lg-0">
-      <ul class="header-actions text-muted small list-unstyled d-flex gap-2 m-0 align-items-center">
+      <ul class="header--actions text-muted small list-unstyled d-flex gap-2 m-0 align-items-center">
         <li><a href="#" class="text-decoration-none text-dark">Obituaries</a> <span class="text-muted">|</span></li>
         <li><a href="#" class="text-decoration-none text-dark">PGe</a> <span class="text-muted">|</span></li>
         <li><a href="#" class="text-decoration-none text-dark">PG Store</a> <span class="text-muted">|</span></li>
         <li><a href="#" class="text-decoration-none text-dark">Archives</a> <span class="text-muted">|</span></li>
         
-        <div class="dropdown custom-hover-dropdown d-inline-block position-relative">
+        <div class="dropdown custom-hover--dropdown d-inline-block position-relative">
         <a href="#" class="text-decoration-none text-dark">
-          Classifieds <i class="bi bi-caret-down-fill ms-1" style="font-size: 0.55rem;"></i>
+          Classifieds <i class="bi bi-caret-down-fill ms-1" style="font-size: 0.55rem;" aria-hidden="true"></i>
         </a>
         
         <ul class="dropdown-menu shadow rounded-1 border-0 mt-0 py-2">

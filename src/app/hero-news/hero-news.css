@@ -49,20 +49,22 @@
         font-size: 0.9rem;
         text-transform: uppercase;
         background-color: #00ff6e;
+        color: #212529;
         z-index: 9;
     }
 
 }
 
-.news-hero__caption {
+.hero-news__caption {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
+  background-color: #000000;
   background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
 }
 
-.news-hero__caption a {
+.hero-news__caption a {
   color: #ffffff !important;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
@@ -93,6 +95,7 @@
         font-size: 0.9rem;
         text-transform: uppercase;
         background-color: #00ff6e;
+        color: #212529;
         z-index: 9;
     }
 
@@ -123,6 +126,7 @@
     display: inline-block;
     color: white;
     background-color: #00ff6e;
+    color: #212529;
     font-family: proxima-nova, Roboto, Arial, sans-serif;
     font-weight: 500;
     font-size: 0.9rem;
